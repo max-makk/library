@@ -1,0 +1,97 @@
+:root {
+    box-sizing: border-box;
+
+    --light: #f4f6ff;
+    --yellow: #fbd46d;
+    --turquoise: #4f8a8b;
+    --dark: #07031a;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--light);
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+h1 {
+    margin-top: 1em;
+    font-weight: 700;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.add-book {
+    padding: 0.5em;
+    display: block;
+    margin: 1em auto 0;
+    font-family: inherit;
+    font-size: 2rem;
+    background: transparent;
+    border: 2px solid var(--dark);
+    cursor: pointer;
+}
+
+.form {
+    position: absolute;
+    background: transparent;
+    padding: 1em;
+}
+
+.form-group {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.form-group input {
+    margin-top: 0.5em;
+    font-size: inherit;
+    border: 2px solid var(--dark);
+}
+
+.form-group:nth-child(4) label {
+    padding: 0.5em;
+    border: 2px solid var(--dark);
+    cursor: pointer;
+}
+
+.read-text {
+    margin-top: 0.5em;
+}
+
+input[type="checkbox"]:checked ~ .read-text::after {
+    content: "READ";
+}
+
+.read-text::after {
+    padding: 0.2em;
+    content: "NOT READ YET";
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+}
+
+.new-book {
+    padding: 0.5em;
+    display: block;
+    margin: 0 auto;
+    font-family: inherit;
+    font-size: 2rem;
+    background: transparent;
+    border: 2px solid var(--dark);
+    cursor: pointer;
+}
