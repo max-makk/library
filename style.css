@@ -20,6 +20,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     color: var(--dark);
     font-weight: 400;
+    border: 10px solid var(--turquoise);
 }
 
 h1 {
@@ -41,6 +42,8 @@ h1 {
 }
 
 .form {
+    /* visibility: hidden; */
+    display: none;
     position: absolute;
     background: transparent;
     padding: 1em;
@@ -94,4 +97,59 @@ input[type="checkbox"] {
     background: transparent;
     border: 2px solid var(--dark);
     cursor: pointer;
+}
+
+ul {
+    margin: 0 auto;
+    margin-top:1em;
+    padding-top: 1em;
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    /* background: var(--turquoise); */
+}
+
+li {
+    background: var(--yellow);
+    border: 2px solid var(--dark);
+    margin: 1em;
+}
+
+li button {
+    outline: none;
+    width: 50%;
+    font-family: inherit;
+    padding: 0.5em;
+    border: 1px solid var(--dark);
+    border-bottom: none;
+    border-left: none;
+    background:transparent;
+    font-weight: 700;
+}
+
+li button:last-child {
+    border-right: none;
+}
+
+button:hover {
+    background: var(--turquoise);
+    color: var(--light);
+}
+
+.book-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+table {
+    border-spacing: 0.5em;
+    padding: 0.5em;
+}
+
+td {
+    padding-left: 1em;
 }

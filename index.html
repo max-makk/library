@@ -1,40 +1,956 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Library</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-        <link href="style.css" rel="stylesheet"/> 
-    </head>
-    <body>
-        <header>
-            <h1>Library</h1>
-            <button class="add-book">Add Book</button> 
-            <form class="form">
-                <div class="form-group">
-                    <label for="title">Title</label> 
-                    <input name="title" type="text" id="title" /> 
-                </div>
-                <div class="form-group">
-                    <label for="author">Author</label> 
-                    <input name="author" type="text" id="author" /> 
-                </div>
-                <div class="form-group">
-                    <label for="pages">Pages</label> 
-                    <input name="pages" type="number" id="pages" /> 
-                </div> 
-                <div class="form-group">
-                    <label for="read">Read?</label> 
-                    <input name="read" type="checkbox" id="read" /> 
-                    <div class="read-text"></div> 
-                </div> 
-                <button class="new-book">Add Book</button>
-            </form> 
-        </header>
-        <main>
-            <div class="container"></div> 
-        </main> 
-        <script src="script.js"></script> 
-    </body>
-</html> 
+  <head>
+    <meta charset="UTF-8" />
+    <title>Library</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Library</h1>
+      <button class="add-book">Add Book</button>
+      <form class="form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input name="title" type="text" id="title" />
+        </div>
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input name="author" type="text" id="author" />
+        </div>
+        <div class="form-group">
+          <label for="pages">Pages</label>
+          <input name="pages" type="number" id="pages" />
+        </div>
+        <div class="form-group">
+          <label for="read">Read?</label>
+          <input name="read" type="checkbox" id="read" />
+          <div class="read-text"></div>
+        </div>
+        <button class="new-book">Add Book</button>
+      </form>
+    </header>
+    <main>
+      <ul class="container">
+
+        <li>
+          <table>
+            <tbody>
+              <tr>
+                <th>Title</th>
+                <td>The sound and the fury</td>
+              </tr>
+              <tr>
+                <th>Author</th>
+                <td>William Faulkner</td>
+              </tr>
+              <tr>
+                <th>Pages</th>
+                <td>326</td>
+              </tr>
+              <tr>
+                <th>Read</th>
+                <td>&#10003;</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="book-buttons">
+              <button class="button-change">Not read</button>
+              <button class="button-delete">Delete</button>    
+          </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+        <li>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <td>The sound and the fury</td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>William Faulkner</td>
+                    </tr>
+                    <tr>
+                        <th>Pages</th>
+                        <td>326</td>
+                    </tr>
+                    <tr>
+                        <th>Read</th>
+                        <td>&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="book-buttons">
+                <button class="button-change">Not read</button>
+                <button class="button-delete">Delete</button>    
+            </div> 
+        </li>
+
+      </ul>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
