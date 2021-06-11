@@ -17,19 +17,19 @@
       <form class="form closed">
         <div class="form-group">
           <label for="title">Title</label>
-          <input name="title" type="text" id="title" />
+          <input name="title" type="text" id="title" required/>
         </div>
         <div class="form-group">
           <label for="author">Author</label>
-          <input name="author" type="text" id="author" />
+          <input name="author" type="text" id="author" required/>
         </div>
         <div class="form-group">
           <label for="pages">Pages</label>
-          <input name="pages" type="number" id="pages" />
+          <input name="pages" type="number" id="pages" required/>
         </div>
         <div class="form-group">
           <label for="read">Read?</label>
-          <input name="read" type="checkbox" id="read" />
+          <input name="read" type="checkbox" id="read" min="1"/>
           <div class="read-text"></div>
         </div>
         <button class="add-book">Add Book</button>
@@ -39,32 +39,32 @@
     <main>
       <ul class="container">
 
-        <li>
-          <table>
-            <tbody>
-              <tr>
-                <th>Title</th>
-                <td id="title">The sound and the fury</td>
-              </tr>
-              <tr>
-                <th>Author</th>
-                <td id="author">William Faulkner</td>
-              </tr>
-              <tr>
-                <th>Pages</th>
-                <td id="pages">326</td>
-              </tr>
-              <tr>
-                <th>Read</th>
-                <td id="read">&#10003;</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="book-buttons">
-              <button class="button-change">Not read</button>
-              <button class="button-delete">Delete</button>    
-          </div> 
-        </li>
+          <!-- <li>
+               <table>
+               <tbody>
+               <tr>
+               <th>Title</th>
+               <td id="title">The sound and the fury</td>
+               </tr>
+               <tr>
+               <th>Author</th>
+               <td id="author">William Faulkner</td>
+               </tr>
+               <tr>
+               <th>Pages</th>
+               <td id="pages">326</td>
+               </tr>
+               <tr>
+               <th>Read</th>
+               <td id="read">&#9746;</td>
+               </tr>
+               </tbody>
+               </table>
+               <div class="book-buttons">
+               <button class="button-change">NOT READ YET</button>
+               <button class="button-delete">Delete</button>    
+               </div> 
+               </li> -->
       </ul>
     </main>
     <script src="script.js"></script>

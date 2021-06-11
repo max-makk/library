@@ -3,6 +3,13 @@ const form = document.querySelector(".form");
 const overlay = document.querySelector(".overlay");
 const addBook = document.querySelector(".add-book");
 
+const titleBook = document.querySelector("#title");
+const authorBook = document.querySelector("#author");
+const pagesBook = document.querySelector("#pages");
+const readBook = document.querySelector("#read");
+
+const container = document.querySelector(".container");
+
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -33,61 +40,121 @@ Book.prototype.info = function () {
 
 function addBookToLibrary() {
   // do stuff here
+  const book = new Book(
+    titleBook.value,
+    authorBook.value,
+    pagesBook.value,
+    readBook.checked
+  );
+  myLibrary.push(book);
+  displaLibrary();
 }
 
 function displaLibrary() {
-  myLibrary.forEach((el) => {
-    console.log(el);
-  });
-}
-
-const container = document.querySelector(".container");
-
-function generateItem() {
-  for (let i = 0; i < 4; i++) {
-    const li = document.createElement("li");
-    const table = document.createElement("table");
-    li.appendChild(table);
-    const tbody = document.createElement("tbody");
-    table.appendChild(tbody);
-    const tr = document.createElement("tr");
-    tbody.appendChild(tr);
-    const th = document.createElement("th");
-    tr.appendChild(th);
-    const td = document.createElement("td");
-    tr.appendChild(td);
-    const trAuthor = document.createElement("tr");
-    tbody.appendChild(trAuthor);
-    const thAuthor = document.createElement("th");
-    trAuthor.appendChild(thAuthor);
-    const tdAuthor = document.createElement("td");
-    trAuthor.appendChild(tdAuthor);
-
-    container.appendChild(li);
+  const removeList = document.querySelectorAll("li");
+  removeList.forEach((el) => container.removeChild(el));
+  for (let i = 0; i < myLibrary.length; i++) {
+    generateItem(myLibrary[i]);
   }
 }
 
-console.log(generateItem());
+function generateItem(item) {
+  const readSymbol = function () {
+    let str;
+    if (item.read) {
+      str = "&#x2713;";
+    } else {
+      str = "&#x2717;";
+    }
+    return str;
+  };
+  const buttonText = function () {
+    let str;
+    if (item.read) {
+      str = "NOT READ YET";
+    } else {
+      str = "READ";
+    }
+    return str;
+  };
+  const li = document.createElement("li");
+  const table = document.createElement("table");
+  li.appendChild(table);
+  const tbody = document.createElement("tbody");
+  table.appendChild(tbody);
+  const trTitle = document.createElement("tr");
+  tbody.appendChild(trTitle);
+  const thTitle = document.createElement("th");
+  thTitle.textContent = "Title";
+  trTitle.appendChild(thTitle);
+  const tdTitle = document.createElement("td");
+  tdTitle.textContent = item.title;
+  trTitle.appendChild(tdTitle);
+  const trAuthor = document.createElement("tr");
+  tbody.appendChild(trAuthor);
+  const thAuthor = document.createElement("th");
+  thAuthor.textContent = "Author";
+  trAuthor.appendChild(thAuthor);
+  const tdAuthor = document.createElement("td");
+  tdAuthor.textContent = item.author;
+  trAuthor.appendChild(tdAuthor);
+  const trPages = document.createElement("tr");
+  tbody.appendChild(trPages);
+  const thPages = document.createElement("th");
+  thPages.textContent = "Pages";
+  trPages.appendChild(thPages);
+  const tdPages = document.createElement("td");
+  tdPages.textContent = item.pages;
+  trPages.appendChild(tdPages);
+  const trRead = document.createElement("tr");
+  tbody.appendChild(trRead);
+  const thRead = document.createElement("th");
+  thRead.textContent = "Read";
+  trRead.appendChild(thRead);
+  const tdRead = document.createElement("td");
+  tdRead.innerHTML = readSymbol();
+  trRead.appendChild(tdRead);
+  const div = document.createElement("div");
+  div.setAttribute("class", "book-buttons");
+  const buttonLeft = document.createElement("button");
+  buttonLeft.textContent = buttonText();
+  const buttonRight = document.createElement("button");
+  buttonRight.textContent = "DELETE";
+  div.appendChild(buttonLeft);
+  div.appendChild(buttonRight);
+  li.appendChild(div);
 
-const book1 = new Book("The sound and the fury", "W.Falknuer", "200", true);
+  buttonLeft.addEventListener("click", function () {
+    if (item.read) {
+      item.read = false;
+      displaLibrary();
+    } else {
+      item.read = true;
+      displaLibrary();
+    }
+  });
 
-const book2 = new Book("The sound and the fury", "W.Falknuer", "200", false);
+  buttonRight.addEventListener("click", function () {
+    myLibrary.splice(myLibrary.indexOf(item), 1);
+    displaLibrary();
+  });
 
-const book3 = new Book("The sound and the fury", "W.Falknuer", "200", false);
-
-const book4 = new Book("The sound and the fury", "W.Falknuer", "200", false);
-
-const book5 = new Book("The sound and the fury", "W.Falknuer", "200", false);
-
-const book6 = new Book("The sound and the fury", "W.Falknuer", "200", false);
-
-myLibrary.push(book1, book2, book3, book4, book5, book6);
-console.dir(myLibrary);
+  container.appendChild(li);
+}
 
 // ***********************************************  Buttons
 
 addBook.addEventListener("click", (e) => {
   e.preventDefault();
+
+  addBookToLibrary();
+
+  titleBook.value = "";
+  authorBook.value = "";
+  pagesBook.value = "";
+  readBook.checked = false;
+  form.classList.toggle("closed");
+  overlay.classList.toggle("closed");
 });
 
 showForm.addEventListener("click", (e) => {
@@ -101,4 +168,4 @@ overlay.addEventListener("click", () => {
   overlay.classList.toggle("closed");
 });
 
-displaLibrary();
+localStorage.setItem(myLibrary);
