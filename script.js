@@ -48,6 +48,7 @@ function addBookToLibrary() {
   );
   myLibrary.push(book);
   displaLibrary();
+  addToLocalStorage();
 }
 
 function displaLibrary() {
@@ -115,7 +116,6 @@ function generateItem(item) {
   tdRead.innerHTML = readSymbol();
   trRead.appendChild(tdRead);
   const div = document.createElement("div");
-  div.setAttribute("class", "book-buttons");
   const buttonLeft = document.createElement("button");
   buttonLeft.textContent = buttonText();
   const buttonRight = document.createElement("button");
@@ -128,15 +128,18 @@ function generateItem(item) {
     if (item.read) {
       item.read = false;
       displaLibrary();
+      addToLocalStorage();
     } else {
       item.read = true;
       displaLibrary();
+      addToLocalStorage();
     }
   });
 
   buttonRight.addEventListener("click", function () {
     myLibrary.splice(myLibrary.indexOf(item), 1);
     displaLibrary();
+    addToLocalStorage();
   });
 
   container.appendChild(li);
@@ -168,4 +171,16 @@ overlay.addEventListener("click", () => {
   overlay.classList.toggle("closed");
 });
 
-localStorage.setItem(myLibrary);
+// *************************************************** LOCAL STORAGE
+
+function addToLocalStorage() {
+  localStorage.setItem("arr", JSON.stringify(myLibrary));
+}
+
+function getFromLocalStorage() {
+  let myLocalLibrary = localStorage.getItem("arr");
+  myLibrary = JSON.parse(myLocalLibrary);
+}
+
+getFromLocalStorage();
+displaLibrary();

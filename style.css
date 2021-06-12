@@ -21,6 +21,13 @@ body {
     color: var(--dark);
     font-weight: 400;
     border: 10px solid var(--turquoise);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1 {
@@ -170,7 +177,7 @@ button:hover {
     color: var(--light);
 }
 
-.book-buttons {
+li div {
     display: flex;
     align-items: center;
     align-content: center;
@@ -183,4 +190,14 @@ table {
 
 td {
     padding-left: 1em;
+}
+
+footer {
+    background: var(--turquoise);
+    padding: 0.5em;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 1em;
+    color: var(--light);
 }
