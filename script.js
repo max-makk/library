@@ -12,31 +12,31 @@ const container = document.querySelector(".container");
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  // the constructor
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
-
-Book.prototype.info = function () {
-  let readStatus;
-  if (this.read) {
-    readStatus = "read";
-  } else if (this.read === false) {
-    readStatus = "not read yet";
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
   }
-  return (
-    this.title +
-    " by " +
-    this.author +
-    ", " +
-    this.pages +
-    ", pages, " +
-    readStatus
-  );
-};
+  info() {
+    let readStatus;
+    if (this.read) {
+      readStatus = "read";
+    } else if (this.read === false) {
+      readStatus = "not read yet";
+    }
+    return (
+      this.title +
+      " by " +
+      this.author +
+      ", " +
+      this.pages +
+      ", pages, " +
+      readStatus
+    );
+  }
+}
 
 function addBookToLibrary() {
   // do stuff here
