@@ -116,15 +116,15 @@ function generateItem(item) {
   tdRead.innerHTML = readSymbol();
   trRead.appendChild(tdRead);
   const div = document.createElement("div");
-  const buttonLeft = document.createElement("button");
-  buttonLeft.textContent = buttonText();
-  const buttonRight = document.createElement("button");
-  buttonRight.textContent = "DELETE";
-  div.appendChild(buttonLeft);
-  div.appendChild(buttonRight);
+  const buttonStatus = document.createElement("button");
+  buttonStatus.textContent = buttonText();
+  const buttonDelete = document.createElement("button");
+  buttonDelete.textContent = "DELETE";
+  div.appendChild(buttonStatus);
+  div.appendChild(buttonDelete);
   li.appendChild(div);
 
-  buttonLeft.addEventListener("click", function () {
+  buttonStatus.addEventListener("click", function () {
     if (item.read) {
       item.read = false;
       displaLibrary();
@@ -136,7 +136,7 @@ function generateItem(item) {
     }
   });
 
-  buttonRight.addEventListener("click", function () {
+  buttonDelete.addEventListener("click", function () {
     myLibrary.splice(myLibrary.indexOf(item), 1);
     displaLibrary();
     addToLocalStorage();
@@ -174,12 +174,14 @@ overlay.addEventListener("click", () => {
 // *************************************************** LOCAL STORAGE
 
 function addToLocalStorage() {
-  localStorage.setItem("arr", JSON.stringify(myLibrary));
+  localStorage.setItem("odinLibrary", JSON.stringify(myLibrary));
 }
 
 function getFromLocalStorage() {
-  let myLocalLibrary = localStorage.getItem("arr");
-  myLibrary = JSON.parse(myLocalLibrary);
+  let myLocalLibrary = localStorage.getItem("odinLibrary");
+  if(myLocalLibrary) {
+    myLibrary = JSON.parse(myLocalLibrary);
+  }
 }
 
 getFromLocalStorage();
